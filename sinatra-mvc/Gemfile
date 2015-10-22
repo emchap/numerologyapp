@@ -10,3 +10,5 @@ gem 'sinatra-activerecord'
 gem 'rake'
 gem 'rack'
 gem 'rack-test'
+
+gem 'faker'

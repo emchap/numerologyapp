@@ -6,9 +6,9 @@ require 'yaml'
 require 'rubygems'
 require 'bundler/setup'
 require 'sinatra'
-require "sinatra/activerecord"
-
+require 'sinatra/activerecord'
 require 'erb'
+
 
 APP_ROOT = Pathname.new(File.expand_path(File.dirname(__FILE__)))
 
