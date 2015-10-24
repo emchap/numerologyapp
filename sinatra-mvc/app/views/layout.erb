@@ -1,13 +1,28 @@
 <!DOCTYPE html> <html>
 <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"> -->
+<link rel="stylesheet" href="/css/people.css">
 <head>
 <meta charset="utf­8">
-<title>Numerology App</title> </head>
+<title>Numerology App</title> 
+</head>
 <body>
-	<div class ="header"><h1>Numerology App</h1></div>
-	<hr />
-	<div class="container"><%= yield %></div>
+<div id="wrapper">
+<div id="header-wrapper">
+<div id="header" class="container">
+<div id="banner">
+		<div class="container">
+			<div class="title">
+				<div id="title"><h2>Numerology App</h2></div>
+			</div>
+		</div>
+</div>
+</div>
+</div>
+<div id="page" class="container">
+	<div class="wrapper"><%= yield %></div></div>
 	<br/><br/><br/>
-	<div class="well"><p>About the developer: Emily is so tired. So, so tired right now.</p></div>
+</div>
+<div id="extra" class="container"><p>About the developer: Emily is so tired. So, so tired right now.</p></div>
 	</body> </html>
+	

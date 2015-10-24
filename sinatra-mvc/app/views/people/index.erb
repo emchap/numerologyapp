@@ -1,5 +1,5 @@
 <h1>People</h1>
-  <table>
+<table>
     <thead>
       <th>Name</th>
       <th>Birthdate</th>   
@@ -15,7 +15,19 @@
           <td>
             <%= "#{person.birthdate}" %>
           </td>
+          <td>
+          	<a href="<%= "/people/#{person.id}/edit" %>"> Edit
+          	</a>
+          </td>
+          <td>
+          	<form action="<%= "/people/#{person.id}" %>" method="post">
+	          	<input type="hidden" name="_method" value="delete" />
+	          	<input type="submit" value="Delete" />
+	        </form>
+	    </td>
         </tr>
       <% end %>
     </tbody>
   </table>
+  
+  <p><a href="/people/new">Enter yourself into the database</a></p>
