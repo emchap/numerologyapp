@@ -1,4 +1,17 @@
-<div class="title"><h2>Add a Person</h2></div>
-<div id="page" class="container">
-<%= erb :"/people/_form" %>
+<div class="container-fluid text-center">
+	<div id="title-container">
+		<h1>Add a Person</h1>
+	</div>
+</div>
+
+<div class="container text-center">
+	<div id="intro-container">
+		<p>Here you can add a new person to the database.</p>
+	</div>
+</div>
+
+<div class="container text-center">
+	<div id="page" class="form">
+		<%= erb :"/people/_form" %>
+	</div>
 </div>

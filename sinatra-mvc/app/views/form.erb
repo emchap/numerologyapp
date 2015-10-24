@@ -1,13 +1,29 @@
-<div class="row">
-<div class="col-md-4">
-<p>Type in your birthdate to find out your numerology number!</p>
+<div class="container-fluid text-center">
+	<div id="title-container">
+		<h1>Find Your Numerology Number</h1>
+	</div>
 </div>
-<form class="col-md-3" action="/" method="post">
-<% if @error%>
-	<div class="alert alert-danger" role="alert"><%= @error %></div>
-<% end %>
-<div class="form-group"><label for="birthdate">Enter your birthdate</label> 
-<input class="form-control" name="birthdate" type="text" /></div><br /><br />
-<input class="btn btn-default" type="submit" />
- 
-</form></div>
+
+<div class="container text-center">
+	<div id="intro-container">
+		Type in your birthdate to find out your numerology number!
+	</div>
+</div>
+
+<div class="container text-center">
+	<div id="page" class="form">
+		<form action="/" method="post">
+			<% if @error%>
+				<div class="alert alert-danger" role="alert">
+					<%= @error %>
+				</div>
+			<% end %>
+			<div class="form-group">
+				<label for="birthdate">Enter your birthdate: </label> 
+				<input name="birthdate" type="text" />
+			</div>
+		<br /><br />
+		<input class="btn" type="submit" />
+		</form>
+	</div>
+</div>

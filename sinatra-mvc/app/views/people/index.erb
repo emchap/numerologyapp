@@ -1,33 +1,54 @@
-<h1>People</h1>
-<table>
-    <thead>
-      <th>Name</th>
-      <th>Birthdate</th>   
-    </thead>
-    <tbody>
-      <% @people.each do |person| %>
-        <tr>
-          <td>
-          	<a href="/people/<%= "#{person.id}" %>">
-            <%= "#{person.first_name} #{person.last_name}" %>
-            </a>
-          </td>
-          <td>
-            <%= "#{person.birthdate}" %>
-          </td>
-          <td>
-          	<a href="<%= "/people/#{person.id}/edit" %>"> Edit
-          	</a>
-          </td>
-          <td>
-          	<form action="<%= "/people/#{person.id}" %>" method="post">
-	          	<input type="hidden" name="_method" value="delete" />
-	          	<input type="submit" value="Delete" />
-	        </form>
-	    </td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-  
+<div class="container-fluid text-center">
+	<div id="title-container">
+		<h1>People</h1>
+	</div>
+</div>
+
+<div class="container text-center">
+	<div id="intro-container">
+		<p>Here you can find a list of all of our saved users. View, edit, or delete the users using the appropriate links. You can also <a href="/people/new">add yourself into the database</a>.</p>
+	</div>
+</div>
+
+<div class="container">
+<div class="col-md-8 col-md-offset-2">
+	<table class="table table-striped">
+		<thead>
+		  <th>Name</th>
+		  <th>Birthdate</th>   
+		  <th>Edit Info</th>
+		  <th>Delete User</th>
+		</thead>
+		<tbody>
+		  <% @people.each do |person| %>
+			<tr>
+			  <td>
+				<a href="/people/<%= "#{person.id}" %>">
+				<%= "#{person.first_name} #{person.last_name}" %>
+				</a>
+			  </td>
+			  <td>
+				<%= "#{person.birthdate.strftime("%m-%d-%Y")}" %>
+			  </td>
+			  <td>
+				<a href="<%= "/people/#{person.id}/edit" %>"> Edit
+				</a>
+			  </td>
+			  <td>
+				<form action="<%= "/people/#{person.id}" %>" method="post">
+					<input type="hidden" name="_method" value="delete" />
+					<input class="btn" type="submit" value="Delete" />
+				</form>
+			</td>
+			</tr>
+		  <% end %>
+		</tbody>
+	  </table>
+</div>
+</div>
+
+<div class="container text-center">
+<div id="footer"> 
   <p><a href="/people/new">Enter yourself into the database</a></p>
+</div>
+</div>
