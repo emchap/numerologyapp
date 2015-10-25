@@ -1,4 +1,3 @@
-
 # we need to tell Rack (remember what Rack is?) that we are just testing.
 # normally this is 'development'
 ENV['RACK_ENV'] = 'test'

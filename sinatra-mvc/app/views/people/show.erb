@@ -1,7 +1,7 @@
-<ul>
-	<li><%= "Name: #{@person.first_name} #{@person.last_name}"%></li>
-	<li><%= "Birthdate: #{@person.birthdate}"%></li>
-	<li><%= "Numerology message: #{@message}"%></li>
-</ul>
-
-<p><a href="../people">Go home</a>
+<div class="container text-center">
+	<div id="intro-container">
+		<p><%= "Name: #{@person.first_name} #{@person.last_name}"%></p>
+		<p><%= "Birthdate: #{@person.birthdate}"%></p>
+		<p><%= "Numerology message: #{@message}"%></p>
+	</div>
+</div>
